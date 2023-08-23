@@ -26,10 +26,10 @@ The **SiliconSquad** web page is designed to inspire and unite IT project enthus
 
 Meet some of our amazing members:
 
-- Aayush ![Aayush] 
-- Anas ![Anas]
-- Shivraj ![Shivraj]
-- Amir ![Amir]
+- Aayush 
+- Anas 
+- Shivraj 
+- Amir
 
 ## Getting Started
 
