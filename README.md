@@ -4,10 +4,10 @@
 Welcome to the **SiliconSquad** repository! This repository showcases a web page for IT projects enthusiasts, featuring a stylish and interactive design.
 
 ## Table of Contents
-- [Description]
-- [Features]
-- [Members]
-- [Getting Started]
+- Description
+- Features
+- Members
+- Getting Started
 
 
 ## Description
