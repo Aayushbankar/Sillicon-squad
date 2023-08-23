@@ -1,6 +1,5 @@
 
-```markdown
-# SiliconSquad - IT Projects Enthusiasts
+# SiliconSquad 
 
 Welcome to the **SiliconSquad** repository! This repository showcases a web page for IT projects enthusiasts, featuring a stylish and interactive design.
 
