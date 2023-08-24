@@ -10,6 +10,8 @@ Welcome to the **SiliconSquad** repository! This repository showcases a web page
 - Getting Started
 
 
+#Visit our web at https://aayushbankar.github.io/sillicon-squad/
+
 ## Description
 
 The **SiliconSquad** web page is designed to inspire and unite IT project enthusiasts. It includes sections for highlighting innovative ideas, hands-on learning, and a collaborative spirit. The page features a hero section, key features, member profiles, and a call-to-action section.
