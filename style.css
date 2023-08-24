@@ -1,391 +1,413 @@
+body, h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
 
-  /* Reset default styles */
-  body, h1, h2, h3, p {
-    margin: 0;
-    padding: 0;
-  }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0e1014; /* Dark background */
+  color: #fff;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
 
-  body {
-      font-family: Arial, sans-serif;
-      background-color: #0e1014; /* Dark background */
-      color: #fff;
-      overflow-x: hidden;
-      scroll-behavior: smooth;
-    }
+/* Navbar Styles */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
+  backdrop-filter: blur(15px); /* Apply blur effect */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Adjusted padding */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; /* Rounded corners */
+  transition: background-color 0.3s, backdrop-filter 0.3s; /* Added transitions */
+}
 
-  /* Navbar Styles */
-  .navbar {
-      background-color: #333;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px; /* Adjusted padding */
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+/* Smooth Typing Animation */
+.navbar-logo {
+  font-size: 2.2em; /* Adjusted font size */
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid white; /* Cursor effect */
+  animation: typing 3s steps(40) infinite, blink-caret 0.75s step-end infinite;
+}
 
-    .navbar-logo {
-      font-size: 2.2em; /* Adjusted font size */
-      font-weight: bold;
-      color: white;
-      text-decoration: none;
-    }
-    .navbar-links {
-      display: flex;
-      list-style: none;
-    }
+/* Navigation Links */
+.navbar-links {
+  display: flex;
+  list-style: none;
+}
 
-    .navbar-links li {
-      margin-right: 45px; /* Adjusted margin */
-    }
+.navbar-links li {
+  margin-right: 20px; /* Adjusted margin */
+}
 
-    .navbar-links a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s, outline 0.3s; /* Added outline transition */
-    outline: none; /* Reset outline by default */
-    padding: 5px 10px; /* Add padding for distance */
-    border-radius: 20px; /* Add curved border */
-  }
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s, outline 0.3s; /* Added outline transition */
+  outline: none; /* Reset outline by default */
+  padding: 5px 10px; /* Add padding for distance */
+  border-radius: 20px; /* Add curved border */
+}
 
-  .navbar-links a:hover {
-    color: #f7f7f7;
-    outline: 2px solid #f7f7f7; /* Added outline on hover */
-  }
+.navbar-links a:hover {
+  color: #f7f7f7;
+  outline: 2px solid #f7f7f7; /* Added outline on hover */
+}
 
-  /* Hero Section */
-/* Updated Hero Section */
+/* Hero Section */
 .hero {
-      background-color: #0e1014; /* Dark background */
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      transition: background-position 0.3s;
-      /* Adding glow effect to the background */
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), 0 0 50px rgba(0, 0, 0, 0.5);
-      /* Background Animation */
-      animation: subtle-shift 20s infinite alternate #0ed4ea;
-      z-index: 4;
-    }
-  .hero:hover {
-    /* Adding stronger glow effect to the background on hover */
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.7), 0 0 100px rgba(0, 0, 0, 0.7);
-  }
+  background: linear-gradient(135deg, #74ebd5, #9face6, #d5a4cf, #f8c1bc, #fdbf77);
+  background-size: 300% 300%;
+  animation: gradientShift1 10s ease infinite; 
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px; /* Adjusted horizontal padding */
+}
 
-  .hero h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-    animation: fade-up 1s ease-in-out;
-    /* Adding glow effect to the text */
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-    /* Gradient Text */
-    background: linear-gradient(45deg, #FFCC00, #FF9900);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-  }
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  color: #222; /* Adjusted text color */
+}
 
-  .hero p {
-    font-size: 1.5em;
-    animation: fade-up 1s ease-in-out 0.3s;
-    /* Adding glow effect to the text */
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
-  }
+.hero p {
+  font-size: 1.5em;
+  color: #444; /* Adjusted text color */
+}
 
-  /* Features Section */
-  .features {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #1a1c20; /* Darker background */
-      padding: 80px 0;
-    }
+/* Members Section */
+.members {
+  background: linear-gradient(135deg, #343a40, #6c757d, #adb5bd, #ced4da, #f8f9fa);
+  background-size: 300% 300%;
+  animation: gradientShift2 10s ease infinite; 
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0; /* Adjusted vertical padding */
+}
+
+.members h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.member-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.member-name {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+/* Features Section */
+.features {
+  background: linear-gradient(135deg, #ff6b6b, #ffe66d, #8cff66, #69e6ff, #ff6b6b);
+  background-size: 300% 300%;
+  animation: gradientShift3 10s ease infinite; 
+  display: flex;
+  flex-wrap: wrap; /* Allow features to wrap on small screens */
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1c20; /* Darker background */
+  padding: 80px 0;
+}
+
+.feature {
+  text-align: center;
+  margin: 0 20px; /* Adjusted margin */
+  transform: translateY(50px);
+  opacity: 0;
+  animation: fade-up 1s ease-in-out;
+  animation-fill-mode: forwards;
+  width: 45%; /* Adjusted width for responsive layout */
+  margin-bottom: 40px; /* Adjusted margin for responsive layout */
+}
+
+.feature:hover {
+  transform: translateY(0) scale(1.05);
+}
+
+.feature-icon {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #f7f7f7;
+  animation: bounce 1s infinite;
+}
+
+.feature-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #0c0c0c;
+}
+
+.feature-description {
+  color: #0d0d0d;
+}
+
+/* Call to Action Section */
+.cta {
+  background: linear-gradient(135deg, #4a90e2, #f96f5d, #4a90e2);
+  background-size: 300% 300%;
+  animation: gradientShift4 10s ease infinite;
+  text-align: center;
+  padding: 80px 0; /* Increased padding for better spacing */
+  background-color: #0e1014; /* Dark background */
+}
+
+.cta h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #f7f7f7;
+}
+
+.cta p {
+  font-size: 1.2em;
+  color: #ccc;
+}
+
+.cta button {
+  padding: 10px 30px;
+  background-color: #333;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 25px;
+}
+
+.cta button:hover {
+  background-color: #ff1900 ;
+}
+
+/* Floating Icons */
+.floating-icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.floating-icons div {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  opacity: 0.8;
+  pointer-events: none;
+  animation: float 4s infinite ease-in-out;
+  z-index: 1;
+}
+
+/* Keyframes */
+@keyframes gradientShift {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* Keyframes for float animation */
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0);
+    background: linear-gradient(45deg, #FF0000, #FFA500, #FFFF00, #008000, #0000FF, #800080);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    filter: hue-rotate(0deg);
+    animation: blink-caret 0.75s step-end infinite, float 4s infinite ease-in-out;
+  }
+  25% {
+    transform: translate(20px, -20px);
+    filter: hue-rotate(45deg);
+    animation: blink-caret 0.75s step-end infinite, float 4s infinite ease-in-out;
+  }
+  50% {
+    transform: translate(-20px, 20px);
+    filter: hue-rotate(90deg);
+    animation: blink-caret 0.75s step-end infinite, float 4s infinite ease-in-out;
+  }
+  75% {
+    transform: translate(20px, -20px);
+    filter: hue-rotate(135deg);
+    animation: blink-caret 0.75s step-end infinite, float 4s infinite ease-in-out;
+  }
+}
+
+
+@keyframes gradientShift1 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes gradientShift2 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes gradientShift3 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes gradientShift4 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* Keyframes for blinking caret */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    height: 70px; /* Adjust the height for smaller screens if needed */
+  }
+  
+
+
+  .navbar-logo {
+    animation: typing 3s steps(40) infinite, blink-caret 0.75s step-end infinite;
+  }
 
   .feature {
-    text-align: center;
-    margin: 0 30px;
-    transform: translateY(50px);
-    opacity: 0;
-    animation: fade-up 1s ease-in-out;
-    animation-fill-mode: forwards;
-    /* Hover Animations */
-    transition: transform 0.3s ease;
-  }
-
-  .feature:hover {
-    transform: translateY(0) scale(1.05);
-  }
-
-  .feature-icon {
-    font-size: 2em;
-    margin-bottom: 10px;
-    color: #f7f7f7;
-    animation: bounce 1s infinite;
+    width: 90%; /* Adjusted width for small screens */
   }
 
   .feature-title {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #f7f7f7;
+    font-size: 1.2em; /* Adjusted font size for small screens */
   }
 
   .feature-description {
-    color: #ccc;
-  }
-
-  /* Call to Action Section */
-  .cta {
-      text-align: center;
-      padding: 100px 0; /* Increased padding for better spacing */
-      background-color: #0e1014; /* Dark background */
+    font-size: 0.9em; /* Adjusted font size for small screens */
   }
 
   .cta h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #f7f7f7;
+    font-size: 2em; /* Adjusted font size for small screens */
   }
 
   .cta p {
-    font-size: 1.2em;
-    color: #ccc;
+    font-size: 1em; /* Adjusted font size for small screens */
   }
 
   .cta button {
-    padding: 10px 30px;
-    background-color: #333;
-    border: none;
-    color: white;
-    font-size: 1.2em;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    font-size: 1em; /* Adjusted font size for small screens */
+    padding: 8px 20px; /* Adjusted padding for small screens */
   }
 
-  .cta button:hover {
-    background-color: #555;
+  .member-photo {
+    width: 100px; /* Adjusted width for small screens */
+    height: 100px; /* Adjusted height for small screens */
   }
 
-  /* Floating Icons */
-  .floating-icons {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+  .member-name {
+    font-size: 1.2em; /* Adjusted font size for small screens */
   }
 
-  .floating-icons div {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    opacity: 0.8;
-    pointer-events: none;
-    animation: float 4s infinite ease-in-out;
-    z-index: 1;
+  .members h2 {
+    font-size: 1.6em; /* Adjusted font size for small screens */
+    margin-bottom: 10px; /* Adjusted margin for small screens */
   }
-
-  .floating-icons div:nth-child(2) {
-    width: 30px;
-    height: 30px;
-    animation: float 6s infinite ease-in-out;
-  }
-
-  .floating-icons div:nth-child(3) {
-    width: 25px;
-    height: 25px;
-    animation: float 5s infinite ease-in-out;
-  }
-
-  .floating-icons div:nth-child(4) {
-    width: 15px;
-    height: 15px;
-    animation: float 3s infinite ease-in-out;
-  }
-
-  /* Add rainbow effect */
-  @keyframes float {
-    0%, 100% {
-      transform: translate(0, 0);
-      background: linear-gradient(45deg, #FF0000, #FFA500, #FFFF00, #008000, #0000FF, #800080);
-      background-clip: padding-box, border-box;
-      background-origin: padding-box, border-box;
-      filter: hue-rotate(0deg);
-    }
-    25% {
-      filter: hue-rotate(45deg);
-    }
-    50% {
-      filter: hue-rotate(90deg);
-    }
-    75% {
-      filter: hue-rotate(135deg);
-    }
-  }
-
-  /* Keyframes */
-  @keyframes fade-up {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-  }
-
-  @keyframes subtle-shift {
-    0% {
-      background-position: center top;
-    }
-    100% {
-      background-position: center bottom;
-    }
-  }
-  /* members-section */
- 
-
-  .hero, .features, .cta, .members {
-      height: 100vh;
-  }
-
-    /* Responsive Styles */
-    @media screen and (max-width: 768px) {
-      .navbar {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-      }
-
-      .navbar-links {
-        margin-top: 10px;
-      }
-
-      .navbar-links li {
-        margin-right: 10px;
-      }
-
-      .hero h1 {
-        font-size: 2em;
-      }
-
-      .hero p {
-        font-size: 1em;
-      }
-
-      .feature {
-        margin: 0 10px;
-      }
-
-      .feature-icon {
-        font-size: 1.5em;
-      }
-
-      .feature-title {
-        font-size: 1em;
-      }
-
-      .feature-description {
-        font-size: 0.8em;
-      }
-
-      .cta h2 {
-        font-size: 2em;
-      }
-
-      .cta p {
-        font-size: 1em;
-      }
-
-      .cta button {
-        font-size: 1em;
-        padding: 8px 20px;
-      }
-
-      .members h2 {
-        font-size: 2em;
-      }
-
-      .members-photo {
-        max-height: 50vh;
-      }
-
-      .arrows {
-        margin-top: 10px;
-      }
-
-      .arrow-line {
-        height: 40px;
-      }
-
-      .arrow-head {
-        width: 10px;
-        height: 10px;
-      }
-      .members {
-        padding: 50px 0;
-      }
-
-      .member {
-        margin-bottom: 20px;
-      }
-
-      .member-photo {
-        width: 80px;
-        height: 80px;
-      }
-
-      .member-name {
-        font-size: 1.2em;
-      }
-    }
-    .members {
-      background-color: #000;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 100px 0;
-    }
-
-    .members h2 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-    }
-
-    .member {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 30px;
-    }
-
-    .member-photo {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    }
-
-    .member-name {
-      font-size: 1.5em;
-      margin-top: 10px;
-    }
+}
