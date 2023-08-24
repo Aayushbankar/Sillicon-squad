@@ -10,7 +10,7 @@ Welcome to the **SiliconSquad** repository! This repository showcases a web page
 - Getting Started
 
 
-#Visit our web at https://aayushbankar.github.io/sillicon-squad/
+## Visit our web at https://aayushbankar.github.io/sillicon-squad/
 
 ## Description
 
